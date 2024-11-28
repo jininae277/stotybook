@@ -15,14 +15,14 @@ export default {
   },
 };
 
-export const LoggedIn = {
+/* export const LoggedIn = {
   args: {
     user: {
       name: 'Jane Doe',
     },
   },
 };
-
+ */
 /* export const LoggedOut = {
   args: {
     user: null,

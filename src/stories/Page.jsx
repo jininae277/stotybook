@@ -11,11 +11,11 @@ export const Page = () => {
       <Header
         user={user}
         onLogin={() => setUser({ name: 'Jane Doe' })}
-        onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
+       /*  onLogout={() => setUser(undefined)} */
+       /*  onCreateAccount={() => setUser({ name: 'Jane Doe' })} */
       />
 
-      <section className="storybook-page">
+  {/*     <section className="storybook-page">
         <h2>Pages in Storybook</h2>
         <p>
           We recommend building UIs with a{' '}
@@ -63,7 +63,7 @@ export const Page = () => {
           </svg>
           Viewports addon in the toolbar
         </div>
-      </section>
+      </section> */}
     </article>
   );
 };
