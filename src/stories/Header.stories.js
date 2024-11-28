@@ -10,8 +10,8 @@ export default {
   },
   args: {
     onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn(),
+   /*  onLogout: fn(),
+    onCreateAccount: fn(), */
   },
 };
 
@@ -23,8 +23,9 @@ export const LoggedIn = {
   },
 };
 
-export const LoggedOut = {
+/* export const LoggedOut = {
   args: {
     user: null,
   },
 };
+ */
