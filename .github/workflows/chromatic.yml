@@ -1,0 +1,36 @@
+name: Chromatic Deployment
+
+on:
+  push:
+    branches:
+      - main  # 배포하려는 브랜치 이름
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 코드를 체크아웃합니다.
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # 2. Node.js 설정합니다 (16 버전)
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # 3. 의존성 설치
+      - name: Install dependencies
+        run: |
+          yarn install
+
+      # 4. Storybook 빌드
+      - name: Run Storybook build
+        run: |
+          yarn storybook build
+
+      # 5. Chromatic에 배포
+      - name: Deploy to Chromatic
+        run: |
+          yarn chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
